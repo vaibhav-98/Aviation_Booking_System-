@@ -1,12 +1,12 @@
 {
-  "name": "base_node_js_project_template",
+  "name": "Notification-service",
   "version": "1.0.0",
-  "description": "A basic started boilerplate project for node",
+  "description": "A basic nofi-service project for node",
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon src/index.js"
   },
-  "author": "Sanket",
+  "author": "Vaibhav",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.8",
