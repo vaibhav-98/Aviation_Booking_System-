@@ -12,6 +12,7 @@ router.post('/',
                 FlightController.createFlight)    
 
 router.get('/', 
+
          FlightController.getAllFlights)     
          
  // /api/flights/:id    GET       

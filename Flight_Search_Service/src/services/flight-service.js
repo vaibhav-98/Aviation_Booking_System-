@@ -49,6 +49,7 @@ async function createFlight(data) {
 
 
 async function getAllFlights(query) {
+   
     let customFilter = {}
      let sortFilter = []
     const endingTripTime = "23:59:00"
@@ -80,11 +81,12 @@ async function getAllFlights(query) {
         const sortFilters = params.map((param) => param.split('_'));
         sortFilter = sortFilters
     }
+   
     try {
          const flights = await flightRepository.getAllFlights(customFilter, sortFilter);
-         
          return flights;
     } catch (error) {
+       console.error(" Error fetching flights:", error);
         throw new AppError('Connot fetch data of all the flights', StatusCodes.INTERNAL_SERVER_ERROR)
     }
 }
